@@ -12,6 +12,10 @@ const ShowOne = () => {
                 <input type='input' name='url' defaultValue={singleBookmark.url} />
                 <input type='submit' value={`update ${singleBookmark.name}`}/>
             </Form>
+            <h2>Delete Book</h2>
+            <Form action={`/delete/${singleBookmark._id}`} method='post'>
+                <input type='submit' value={`Delete ${singleBookmark.name}`}/>
+            </Form>
         </div>
     )
 }

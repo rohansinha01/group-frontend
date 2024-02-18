@@ -45,3 +45,10 @@ export const updateAction = async ({request, params}) => {
 
     return redirect('/') //go back to the landing page 
 }
+
+export const deleteAction = async ({params}) => {
+    await fetch(`${URL}/bookmark/${params.id}`, {
+        method: 'delete'
+    });
+    return redirect('/')
+}

@@ -5,7 +5,7 @@ import App from "./App";
 import ShowAll from "./pages/Index"
 import ShowOne from "./pages/Show";
 import { bookmarkLoader, singleBookmarkLoader } from "./loader";
-import { createAction, updateAction } from "./actions";
+import { createAction, updateAction, deleteAction } from "./actions";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -14,6 +14,7 @@ const router = createBrowserRouter(
             <Route path=":id" element={<ShowOne />} loader={singleBookmarkLoader} />
             <Route path="create" action={createAction}/>
             <Route path="update/:id" action={updateAction} />
+            <Route path='delete/:id' action={deleteAction}/>
         </Route>
 
     )
