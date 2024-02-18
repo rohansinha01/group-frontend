@@ -1,4 +1,4 @@
-import { useLoaderData, Form } from "react-router-dom"
+import { Link, useLoaderData, Form } from "react-router-dom"
 
 const ShowAll = () => {
     const bookmarks = useLoaderData()
@@ -16,7 +16,10 @@ const ShowAll = () => {
             {bookmarks.map(v => {
                 return (
                     <div key={v._id} className="bookmark">
-                        <h4>{v.name}</h4>
+                        <Link to={`/${v._id}`}>
+                            <h4>{v.name}</h4>
+                        </Link>
+                        
                     </div>            
                 )
             })}

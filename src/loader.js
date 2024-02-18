@@ -7,4 +7,9 @@ export const bookmarkLoader = async () => {
     return data
 }
 
+export const singleBookmarkLoader = async ({params}) => {
+    const response = await fetch(`${URL}/bookmark/${params.id}`)
+    const data = await response.json()
+    return data
+}
 
