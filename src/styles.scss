@@ -1,0 +1,91 @@
+
+
+
+
+
+$light-green: #606C38;
+$dark-green: #283618;
+$light-background: #FEFAE0;
+$light-brown: #DDA15E;
+$background-color: #D2B466;
+$font-color: #d3d3d3;
+$dark-brown: #BC6C25;
+
+body{
+    background: $background-color;
+    font-family: "Gentium Book Plus", serif;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.nav-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Gentium Book Plus", serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.add-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-form input{
+    padding: 1rem;
+    margin-left: 15px;
+}
+
+@media only screen and (max-width: 600px){
+    .add-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .add-form input{
+        padding: 1rem;
+        margin-top: .75rem;
+    }
+    
+    .field:focus{
+        background-color: $light-background;
+        border: .2rem dotted $light-green;
+    }
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: fit-content;
+    border: .2rem solid black;
+    margin-top: 2rem;
+}
+
+.bookmark-title{
+    font-family: "Gentium Book Plus", serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.bookmarks {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+}
+.links:link{
+    color: $dark-green;
+}
+.links:visited{
+    color: $dark-green;
+}
+.links:hover{
+    color: $light-green;
+}
