@@ -9,7 +9,7 @@ const ShowAll = () => {
             <Form action={`/create`} method='post' className="add-form">
                 <input type='input' name='name' placeholder="bookmark" className="field" />
                 <input type='input' name='url' placeholder="website" className="field" />
-                <input type='submit' value={`create bookmark`} className="submit-button"/>
+                <input className="button" type='submit' value={`create bookmark`}/>
             </Form>
 
             <div className="container">
